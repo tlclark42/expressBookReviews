@@ -47,7 +47,7 @@ public_users.get('/title/:title',function (req, res) {
    // Extract the author parameter from the request URL
    const title = req.params.title;
    // Filter the users array to find books whose title matches the extracted email parameter
-   let filtered_users = users.filter((user) => user.author === title);
+   let filtered_users = users.filter((user) => user.title === title);
    // Send the filtered_users array as the response to the client
    res.send(filtered_users);
   //return res.status(300).json({message: "Yet to be implemented"});
